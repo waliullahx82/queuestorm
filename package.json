@@ -1,0 +1,12 @@
+{
+  "name": "queuestorm-ticket-sorter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QueueStorm mock-preliminary ticket classifier: rules-first with adaptive Gemini 3.5 Flash escalation.",
+  "type": "commonjs",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test:local": "node test/local.js",
+    "test:cases": "node test/local.js --cases"
+  }
+}
