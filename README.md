@@ -212,7 +212,7 @@ bash test/smoke.sh https://<your-deploy>    # health + 5 samples against a deplo
 
 ## Deployment
 
-The handlers in `server/api/` (`health.js`, `sort-ticket.js`) are written as standard Vercel serverless functions — each exports `(req, res)` and reads `req.body` / writes `res.status().json()`. To deploy on Vercel: import the repo (framework preset **Other**, no build command), add a route mapping so the functions answer at `/health` and `/sort-ticket` (a `vercel.json` rewrite), set `GEMINI_API_KEY` in the project's environment variables, and the public HTTPS endpoint is ready for the judge harness. Give `sort-ticket` enough function duration (e.g. `maxDuration: 60`) so a high-thinking escalation is never killed before the internal 25 s abort.
+The handlers in `api/` (`health.js`, `sort-ticket.js`) are written as standard Vercel serverless functions — each exports `(req, res)` and reads `req.body` / writes `res.status().json()`. To deploy on Vercel: import the repo (framework preset **Other**, no build command), add a route mapping so the functions answer at `/health` and `/sort-ticket` (a `vercel.json` rewrite), set `GEMINI_API_KEY` in the project's environment variables, and the public HTTPS endpoint is ready for the judge harness. Give `sort-ticket` enough function duration (e.g. `maxDuration: 60`) so a high-thinking escalation is never killed before the internal 25 s abort.
 
 For a self-hosted or Docker fallback, `server.local.js` is a zero-dependency HTTP server that runs the identical pipeline — point it at a port, set the same environment variables, and it serves the same two routes.
 
