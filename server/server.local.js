@@ -13,8 +13,8 @@
 // Pair it with the frontend in web/ (which proxies these routes in dev).
 
 const http = require("http");
-const health = require("./api/health");
-const sortTicket = require("./api/sort-ticket");
+const health = require("../api/health");
+const sortTicket = require("../api/sort-ticket");
 
 const PORT = process.env.PORT || 3001;
 

@@ -1,12 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "server/api/sort-ticket.js": { "maxDuration": 60 },
-    "server/api/health.js": { "maxDuration": 10 }
+    "api/sort-ticket.js": { "maxDuration": 60 },
+    "api/health.js": { "maxDuration": 10 }
   },
   "rewrites": [
-    { "source": "/health", "destination": "/server/api/health" },
-    { "source": "/sort-ticket", "destination": "/server/api/sort-ticket" },
+    { "source": "/health", "destination": "/api/health" },
+    { "source": "/sort-ticket", "destination": "/api/sort-ticket" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
