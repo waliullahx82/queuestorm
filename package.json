@@ -6,7 +6,10 @@
   "type": "commonjs",
   "engines": { "node": ">=18" },
   "scripts": {
-    "test:local": "node test/local.js",
-    "test:cases": "node test/local.js --cases"
+    "test:local": "node server/test/local.js",
+    "test:cases": "node server/test/local.js --cases",
+    "client:dev": "npm --prefix client run dev",
+    "server:dev": "node server/server.local.js",
+    "build": "npm --prefix client install && npm --prefix client run build"
   }
 }

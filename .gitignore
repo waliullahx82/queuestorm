@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.local
+.env*.local
+.vercel
+*.log
+
+# leftover local diagnostics (do not commit)
+diag*.js
+server/test/response.json
+.agents
+.claude
+.codex
